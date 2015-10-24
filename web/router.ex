@@ -8,13 +8,6 @@ defmodule PeepBlogBackend.Router do
   scope "/", PeepBlogBackend do
     pipe_through :api
 
-    get "/", PageController, :index
+    resources "/posts", PostController, except: [:new, :edit]
   end
-
-  resources "/posts", PostController, except: [:new, :edit]
-
-  # Other scopes may use custom stacks.
-  # scope "/api", PeepBlogBackend do
-  #   pipe_through :api
-  # end
 end
