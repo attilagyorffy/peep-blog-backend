@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :peep_blog_backend, PeepBlogBackend.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "attila",
+  password: "",
   database: "peep_blog_backend_dev",
   hostname: "localhost",
   pool_size: 10
