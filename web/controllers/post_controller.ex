@@ -7,7 +7,9 @@ defmodule PeepBlogBackend.PostController do
 
   def index(conn, _params) do
     posts = Repo.all(Post)
-    render(conn, "index.json", posts: posts)
+    |> PeepBlogBackend.PostSerializer.format(conn)
+    json(conn, posts)
+    # render(conn, "index.json", posts: posts)
   end
 
   def create(conn, %{"post" => post_params}) do
