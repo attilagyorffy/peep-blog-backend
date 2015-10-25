@@ -3,6 +3,7 @@ defmodule PeepBlogBackend.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug Corsica, origins: "http://localhost:4200"
   end
 
   scope "/", PeepBlogBackend do
