@@ -2,7 +2,7 @@ defmodule PeepBlogBackend.Router do
   use PeepBlogBackend.Web, :router
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug :accepts, ["json-api"]
     plug Corsica, origins: "http://localhost:4200"
   end
 
