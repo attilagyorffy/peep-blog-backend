@@ -36,7 +36,8 @@ defmodule PeepBlogBackend.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:corsica, "~> 0.4"}]
+     {:corsica, "~> 0.4"},
+     {:ja_serializer, "~> 0.4.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
