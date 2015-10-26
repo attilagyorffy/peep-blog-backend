@@ -1,4 +1,6 @@
-# PeepBlogBackend
+# PEEP stack back-end
+
+This is the Phoenix based back-end component of the example [PEEP Stack](https://medium.com/@j_mcnally/the-peep-stack-b7ba5afdd055#.kg4bxsapo). It is meant to be used in conjunction with the [Ember.js front-end component](https://github.com/liquid/peep-stack-frontend) using a [JSONAPI](http://jsonapi.org) standard.
 
 To start your Phoenix app:
 
@@ -6,13 +8,9 @@ To start your Phoenix app:
   2. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   3. Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
 ## Learn more
 
-  * Official website: http://www.phoenixframework.org/
+  * Official Phoenix website: http://www.phoenixframework.org/
   * Guides: http://phoenixframework.org/docs/overview
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
