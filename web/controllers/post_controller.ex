@@ -3,13 +3,7 @@ defmodule PeepBlogBackend.PostController do
 
   alias PeepBlogBackend.Post
 
-  plug :scrub_params, "post" when action in [:create, :update]
-
-  def options(conn, _params) do
-    conn
-    |> put_status(200)
-    |> text(nil)
-  end
+  # plug :scrub_params, "post" when action in [:create, :update]
 
   def index(conn, _params) do
     posts = Repo.all(Post)
@@ -18,7 +12,7 @@ defmodule PeepBlogBackend.PostController do
     # render(conn, "index.json", posts: posts)
   end
 
-  def create(conn, %{"post" => post_params}) do
+  def create(conn, %{"data" => %{"attributes" => post_params}}) do
     changeset = Post.changeset(%Post{}, post_params)
 
     case Repo.insert(changeset) do
